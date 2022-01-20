@@ -7,6 +7,7 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GeneralComponent } from './general/general.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,10 @@ import { GeneralComponent } from './general/general.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxsModule.forRoot([]),
+    ReactiveFormsModule,
+    NgxsModule.forRoot([],{ developmentMode: true }),
     NgxsReduxDevtoolsPluginModule.forRoot()
+    
 
   ],
   providers: [],
